@@ -1,0 +1,27 @@
+2. Replace selected character with another in entered string.
+
+DECLARE Str1, Str2 : STRING
+DECLARE Char1, Cher2, ThisChar : CHARACTER
+DECLARE Count : INTEGER
+
+Str1 <-- ""
+Str2 <-- ""
+Char1 <-- ''
+Char2 <-- ''
+ThisChar <-- ''
+Count <-- 0
+
+INPUT "Enter String to process: ", Str1
+INPUT "Enter character to be replaced: ", Char1
+INPUT "Enter new character: ", Char2
+
+FOR Count <-- 1 TO LENGTH(Str1)
+    ThisChar <-- MID(Str1,Count, 1)
+    IF ThisChar = Char1
+        THEN 
+          ThisChar <-- Char2
+    END IF
+   Str2 <-- ThisChar + Str2
+NEXT
+
+OUTPUT "This is the new string: ", Str2

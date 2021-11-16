@@ -1,0 +1,30 @@
+pseudocode #1.
+Find if the input string has all the alphabets; capital or small alike.
+
+(is the input string a pangram)
+
+DECLARE Str1 : STRING
+DECLARE Alpha : ARRAY(1:26) OF CHARACTER
+DECLARE ThisAlph : CHARACTER 
+DECLARE AlphaPos : INTEGER
+
+
+isPangram = TRUE
+INPUT "Enter the string to be checked: ", Str1
+Str1= UCase(Str1)
+Alpha <-- A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z
+FOR Index <-- 1 TO 26
+    ThisAlph <-- MID(Alpha,Index,1)
+    AlphaPos <-- LOCATE(Str1,ThisAlph)
+      IF AlphaPos = 0 
+         THEN isPangram = FALSE
+            EXIT FOR
+NEXT
+
+IF isPangram = TRUE 
+    THEN OUTPUT "This string has all the alphabets."
+      ELSE OUTPUT "This string dose not have all the alphabets."
+ENDIF
+
+
+
