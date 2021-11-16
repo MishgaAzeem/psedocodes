@@ -1,0 +1,34 @@
+5. Find the count of vowels characters in an entered string separately.  
+
+
+DECLARE Str1 : STRING
+DECLARE Char1 : CHARACTER
+DECLARE x, ACount, ECount, ICount, OCount,UCount : INTEGER
+
+Str1 ← ""
+Char1 ← ''
+x ← 0
+ACount ← 0
+ECount ← 0
+ICount ← 0
+OCount ← 0
+UCount ← 0
+
+INPUT "Enter string to be processed: ", Str1
+Str1= UCase(Str1)
+
+For x ← 1 TO LEN(Str1)
+  Char1 ← MID(Str1, index, 1)
+  CASE OF Char1
+     "A": ACount = ACount + 1 
+     "E": ECount = ECount + 1 
+     "I": ICount = ICount + 1 
+     "O": OCount = OCount + 1 
+     "U": UCount = UCount + 1 
+  END CASE
+
+OUTPUT "The number of A's in this string are: ", ACount
+OUTPUT "The number of E's in this string are: ", ECount
+OUTPUT "The number of I's in this string are: ", ICount
+OUTPUT "The number of O's in this string are: ", OCount
+OUTPUT "The number of U's in this string are: ", UCount
