@@ -1,0 +1,36 @@
+9.
+MixUp:
+Given strings a and b, return a single string with a and b separated
+by a space '<a> <b>', except swap the first 2 chars of each string.
+e.g.
+  'mix', pod' -> 'pox mid'
+  'dog', 'dinner' -> 'dig donner'
+  Assume a and b are length 2 or more.
+
+
+DECLARE Str1, Str2, Str3, Str4, Str5, Str6, Str7, Str8 : STRING
+
+Str1 <-- ""
+Str2 <-- ""
+Str3 <-- ""
+Str4 <-- ""
+Str5 <-- ""
+Str6 <-- ""
+Str7 <-- ""
+Str8 <-- ""
+
+INPUT("Enter the first string: ", Str1)
+INPUT("Enter the second string: ", Str2)
+Str3 <-- LEFT(Str1,2)
+Str4 <-- LEFT(Str2,2)
+Str5 <-- MID(Str1,3,LENGTH(Str1)) 
+Str6 <-- MID(Str2,3,LENGTH(Str2)) 
+Str7 <-- Str4 + Str5 
+Str8 <-- Str3 + Str6
+
+OUTPUT("The processed string is " + Str7 + " " + Str8)
+
+
+
+
+

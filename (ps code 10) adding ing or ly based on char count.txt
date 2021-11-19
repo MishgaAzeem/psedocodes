@@ -1,0 +1,28 @@
+10.
+verbing:
+Given a string, if its length is at least 3,
+add 'ing' to its end.
+Unless it already ends in 'ing', in which case
+add 'ly' instead.
+If the string length is less than 3, leave it unchanged.
+Return the resulting string.
+examples:
+input 'end' --> 'ending'
+input 'ending' --> 'endingly'
+input 'go' --> 'go'
+
+DECLARE Str1, Str2 : STRING
+
+Str1 <-- ""
+Str2 <-- ""
+
+INPUT ("Enter the string to be processed: ", Str1)
+ IF LENGTH(Str1) >= 3 THEN 
+    Str2 <-- RIGHT(Str1, 3)
+     IF Str2 = "ing" THEN 
+        OUTPUT ("New String: " ,Str1, + "ly")
+     ELSE OUTPUT ("New String: " ,Str1, + "ing" )
+     END IF
+ ELSE OUTPUT ("Unchanged String: ", Str1 )
+ END IF
+        
